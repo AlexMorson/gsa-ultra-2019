@@ -29,8 +29,6 @@ def solution(T, Q):
             sizes[parent][node] = node_size
             sizes[node][parent] = T_n - node_size
 
-    #print(sizes)
-
     ways_to_get_size = [0 for _ in range(T_n+1)]
     for node in range(T_n):
         ways_to_get_size[T_n] += 1
@@ -60,11 +58,6 @@ def solution(T, Q):
         prob = Fraction(ways, T_n*T_n)
         A = prob.numerator
         B = prob.denominator
-        #A = ways
-        #B = T_n*T_n
-
-        print(q)
-        print(A, B)
 
         return (A * modular_inverse(B)) % (10**9 + 7)
 
@@ -74,13 +67,11 @@ def solution(T, Q):
     return total % (10**9 + 7)
 
 if __name__ == "__main__":
-    with open("input.txt", "r") as f:
+    with open("downloadable_input.txt", "r") as f:
         T = [*map(int, f.readline().strip().split())]
         T = [*zip(T, T[1:])][::2]
 
         Q = [*map(int, f.readline().strip().split())]
 
-    #T = [(1,2), (2,3), (3,4), (4,5), (3,6), (6,7)]
-    #Q = [*range(8)]
-
     print(solution(T, Q))
+    # 183673472

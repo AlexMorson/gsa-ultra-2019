@@ -37,9 +37,11 @@ def solution(Z, T, D, N):
     return r
 
 if __name__ == "__main__":
-    Z = 2342343  
-    T = (1, 10)
-    D = (2, 1)
-    N = 10
+    with open("downloadable_input.txt", "r") as f:
+        Z = int(f.readline().strip())
+        T = tuple(map(int, f.readline().strip().split()))
+        D = tuple(map(int, f.readline().strip().split()))
+        N = int(f.readline().strip())
 
     print(solution(Z, T, D, N))
+    # 742443

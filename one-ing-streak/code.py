@@ -1,4 +1,3 @@
-
 def solution(A):
     best_start = -1
     best_count = 0
@@ -22,7 +21,8 @@ def solution(A):
     return best_start
 
 if __name__ == "__main__":
-    with open("input.txt", "r") as f:
+    with open("downloadable_input.txt", "r") as f:
         A = [*map(int, f.readline().split())]
 
     print(solution(A))
+    # 24749

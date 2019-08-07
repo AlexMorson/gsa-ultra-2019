@@ -19,13 +19,14 @@ def solution(S, X, Q):
     return res % (10**9 + 7)
 
 if __name__ == "__main__":
-    with open("input.txt", "r") as f:
+    with open("downloadable_input.txt", "r") as f:
         S = f.readline().strip().split()
         X = [*map(int, f.readline().strip().split())]
         Q = [*map(int, f.readline().strip().split())]
         Q = [*zip(Q, Q[1:])][::2]
 
     print(solution(S, X, Q))
+    # 15980
 
     def test(S, X, Q, s):
         t = solution(S, X, Q)

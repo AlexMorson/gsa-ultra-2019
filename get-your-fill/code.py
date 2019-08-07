@@ -27,7 +27,6 @@ def find_smallest_string(S):
 
 def solution(S):
     A = find_smallest_string(S)
-    print(A)
     if A is None:
         return 1000000007
 
@@ -41,10 +40,8 @@ def solution(S):
     return res % (10**9 + 7)
 
 if __name__ == "__main__":
-    with open("input.txt", "r") as f:
+    with open("downloadable_input.txt", "r") as f:
         S = f.readline().strip()
 
-    S = "?"*10000
-    from timeit import timeit
-    print(timeit('solution(S)', globals=globals(), number=3))
     print(solution(S))
+    # 1000000007

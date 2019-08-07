@@ -4,11 +4,12 @@ def solution(C, D):
     return sum(min(c, d) for c, d in zip(C, D))
 
 if __name__ == "__main__":
-    with open("input.txt", "r") as f:
+    with open("downloadable_input.txt", "r") as f:
         C = [*map(int, f.readline().strip().split())]
         D = [*map(int, f.readline().strip().split())]
 
     print(solution(C, D))
+    # 1524471
 
     def test(C, D, s):
         t = solution(C, D)

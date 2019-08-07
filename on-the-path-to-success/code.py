@@ -9,6 +9,7 @@ def solution(P, V):
     # Precompute scores
     scores = [sum(map(int, "{:b}".format(x))) for x in range(256)]
 
+    # Do BFS from each node, stopping once value is 0
     f = [0 for _ in range(9)]
     for start in range(N):
         seen = {start}
@@ -33,8 +34,9 @@ def solution(P, V):
     return total % (10**9 + 7)
 
 if __name__ == "__main__":
-    with open("input.txt", "r") as f:
+    with open("downloadable_input.txt", "r") as f:
         P = [*map(int, f.readline().strip().split())]
         V = [*map(int, f.readline().strip().split())]
 
     print(solution(P, V))
+    # 1213321

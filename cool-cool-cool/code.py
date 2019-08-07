@@ -39,14 +39,16 @@ def solution(A):
     return total
 
 if __name__ == "__main__":
-    with open("input.txt", "r") as f:
+    with open("downloadable_input.txt", "r") as f:
         A = [*map(int, f.readline().strip().split())]
+
+    print(solution(A))
+    # 273412501
 
     def test(A, s):
         t = solution(A)
         if t != s:
             print("Got solution({}) == {} != {}".format(A, t, s))
-    print(solution(A))
 
     test([1, 1], 1)
     test([1, 1, 1], 1)
