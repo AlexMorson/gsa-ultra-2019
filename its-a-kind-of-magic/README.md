@@ -1,26 +1,26 @@
 # 10 Across: "It's a kind of magic"
 
-You're given a set $S$ of $N_S$ strings, where each string consists only of digits from $0$ to $9$. The $i^{th}$ string in the set $S$ is assigned a *score* of $x_i$.
+You're given a set ![\inline S](http://latex.codecogs.com/svg.latex?%5Cinline%20S) of ![\inline N_S](http://latex.codecogs.com/svg.latex?%5Cinline%20N_S) strings, where each string consists only of digits from ![\inline 0](http://latex.codecogs.com/svg.latex?%5Cinline%200) to ![\inline 9](http://latex.codecogs.com/svg.latex?%5Cinline%209). The ![\inline i^{th}](http://latex.codecogs.com/svg.latex?%5Cinline%20i%5E%7Bth%7D) string in the set ![\inline S](http://latex.codecogs.com/svg.latex?%5Cinline%20S) is assigned a *score* of ![\inline x_i](http://latex.codecogs.com/svg.latex?%5Cinline%20x_i).
 
-For any string $T$, we define its *magic value* to be the sum of the scores of all strings from the set $S$ which are present in $T$ as substrings. Note that if a string occurs in $T$ as a substring multiple times starting at different indices, its score is counted in the sum multiple times, once for each occurrence.
+For any string ![\inline T](http://latex.codecogs.com/svg.latex?%5Cinline%20T), we define its *magic value* to be the sum of the scores of all strings from the set ![\inline S](http://latex.codecogs.com/svg.latex?%5Cinline%20S) which are present in ![\inline T](http://latex.codecogs.com/svg.latex?%5Cinline%20T) as substrings. Note that if a string occurs in ![\inline T](http://latex.codecogs.com/svg.latex?%5Cinline%20T) as a substring multiple times starting at different indices, its score is counted in the sum multiple times, once for each occurrence.
 
-You're given $Q$, a set of $N_Q$ queries of the form $(L, R)$.
+You're given ![\inline Q](http://latex.codecogs.com/svg.latex?%5Cinline%20Q), a set of ![\inline N_Q](http://latex.codecogs.com/svg.latex?%5Cinline%20N_Q) queries of the form ![\inline (L, R)](http://latex.codecogs.com/svg.latex?%5Cinline%20%28L%2C%20R%29).
 
-For each query $Q_i = (L_i, R_i)$, let $str(j)$ be the string representation (with no leading zeroes) of integer $j$, where $L_i \leq j \leq R_i$.
+For each query ![\inline Q_i = (L_i, R_i)](http://latex.codecogs.com/svg.latex?%5Cinline%20Q_i%20%3D%20%28L_i%2C%20R_i%29), let ![\inline str(j)](http://latex.codecogs.com/svg.latex?%5Cinline%20str%28j%29) be the string representation (with no leading zeroes) of integer ![\inline j](http://latex.codecogs.com/svg.latex?%5Cinline%20j), where ![\inline L_i \leq j \leq R_i](http://latex.codecogs.com/svg.latex?%5Cinline%20L_i%20%5Cleq%20j%20%5Cleq%20R_i).
 
-Let $ans(i)$ be the sum of magic values of $str(j)$ for all $j, L_i \leq j \leq R_i$.
+Let ![\inline ans(i)](http://latex.codecogs.com/svg.latex?%5Cinline%20ans%28i%29) be the sum of magic values of ![\inline str(j)](http://latex.codecogs.com/svg.latex?%5Cinline%20str%28j%29) for all ![\inline j, L_i \leq j \leq R_i](http://latex.codecogs.com/svg.latex?%5Cinline%20j%2C%20L_i%20%5Cleq%20j%20%5Cleq%20R_i).
 
-Return $(\sum_{i=1}^{N_Q} 2^i \times ans(i)) \mod{10^9 + 7}$.
+Return ![\inline (\sum_{i=1}^{N_Q} 2^i \times ans(i)) \mod{10^9 + 7}](http://latex.codecogs.com/svg.latex?%5Cinline%20%28%5Csum_%7Bi%3D1%7D%5E%7BN_Q%7D%202%5Ei%20%5Ctimes%20ans%28i%29%29%20%5Cmod%7B10%5E9%20%2B%207%7D).
 
 ### Input
 
-- $S$: A tuple of $N_S$ strings.
-- $X$: A tuple of $N_S$ integers where $i^{th}$ denotes $x_i$, the score of the $i^{th}$ string in $S$.
-- $Q$: A tuple of $N_Q$ elements $Q_1, Q_2, ..., Q_{N_Q}$. $Q_i$ is a tuple $(L_i, R_i)$ denoting the $i^{th}$ query.
+- ![\inline S](http://latex.codecogs.com/svg.latex?%5Cinline%20S): A tuple of ![\inline N_S](http://latex.codecogs.com/svg.latex?%5Cinline%20N_S) strings.
+- ![\inline X](http://latex.codecogs.com/svg.latex?%5Cinline%20X): A tuple of ![\inline N_S](http://latex.codecogs.com/svg.latex?%5Cinline%20N_S) integers where ![\inline i^{th}](http://latex.codecogs.com/svg.latex?%5Cinline%20i%5E%7Bth%7D) denotes ![\inline x_i](http://latex.codecogs.com/svg.latex?%5Cinline%20x_i), the score of the ![\inline i^{th}](http://latex.codecogs.com/svg.latex?%5Cinline%20i%5E%7Bth%7D) string in ![\inline S](http://latex.codecogs.com/svg.latex?%5Cinline%20S).
+- ![\inline Q](http://latex.codecogs.com/svg.latex?%5Cinline%20Q): A tuple of ![\inline N_Q](http://latex.codecogs.com/svg.latex?%5Cinline%20N_Q) elements ![\inline Q_1, Q_2, ..., Q_{N_Q}](http://latex.codecogs.com/svg.latex?%5Cinline%20Q_1%2C%20Q_2%2C%20...%2C%20Q_%7BN_Q%7D). ![\inline Q_i](http://latex.codecogs.com/svg.latex?%5Cinline%20Q_i) is a tuple ![\inline (L_i, R_i)](http://latex.codecogs.com/svg.latex?%5Cinline%20%28L_i%2C%20R_i%29) denoting the ![\inline i^{th}](http://latex.codecogs.com/svg.latex?%5Cinline%20i%5E%7Bth%7D) query.
 
 ### Constraints
 
-- $1 \leq N_S, N_Q \leq 3 \times 10^3$
-- $1 \leq \textrm{length}(S_i) \leq 18$ for all $i$
-- $1 \leq x_i \leq 10^{9}$ for all $i$
-- $1 \leq L_i, R_i \leq 10^{18}$ for all $i$
+- ![\inline 1 \leq N_S, N_Q \leq 3 \times 10^3](http://latex.codecogs.com/svg.latex?%5Cinline%201%20%5Cleq%20N_S%2C%20N_Q%20%5Cleq%203%20%5Ctimes%2010%5E3)
+- ![\inline 1 \leq \textrm{length}(S_i) \leq 18](http://latex.codecogs.com/svg.latex?%5Cinline%201%20%5Cleq%20%5Ctextrm%7Blength%7D%28S_i%29%20%5Cleq%2018) for all ![\inline i](http://latex.codecogs.com/svg.latex?%5Cinline%20i)
+- ![\inline 1 \leq x_i \leq 10^{9}](http://latex.codecogs.com/svg.latex?%5Cinline%201%20%5Cleq%20x_i%20%5Cleq%2010%5E%7B9%7D) for all ![\inline i](http://latex.codecogs.com/svg.latex?%5Cinline%20i)
+- ![\inline 1 \leq L_i, R_i \leq 10^{18}](http://latex.codecogs.com/svg.latex?%5Cinline%201%20%5Cleq%20L_i%2C%20R_i%20%5Cleq%2010%5E%7B18%7D) for all ![\inline i](http://latex.codecogs.com/svg.latex?%5Cinline%20i)

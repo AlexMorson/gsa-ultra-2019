@@ -1,25 +1,25 @@
 # 12 Across: "Deforestation"
 
-Take an undirected tree $T$ with $N_T$ nodes and consider one of its nodes, $x$. To find a *subtree* of $x$ relative to some other node $r$ we first root the tree $T$ at $r$. The *subtree* of $x$ relative to $r$ is then defined as the set of all nodes $n$ for which $x$ lies on the path from $n$ to $r$. The *size* of a subtree is the number of nodes this set contains.
+Take an undirected tree ![\inline T](http://latex.codecogs.com/svg.latex?%5Cinline%20T) with ![\inline N_T](http://latex.codecogs.com/svg.latex?%5Cinline%20N_T) nodes and consider one of its nodes, ![\inline x](http://latex.codecogs.com/svg.latex?%5Cinline%20x). To find a *subtree* of ![\inline x](http://latex.codecogs.com/svg.latex?%5Cinline%20x) relative to some other node ![\inline r](http://latex.codecogs.com/svg.latex?%5Cinline%20r) we first root the tree ![\inline T](http://latex.codecogs.com/svg.latex?%5Cinline%20T) at ![\inline r](http://latex.codecogs.com/svg.latex?%5Cinline%20r). The *subtree* of ![\inline x](http://latex.codecogs.com/svg.latex?%5Cinline%20x) relative to ![\inline r](http://latex.codecogs.com/svg.latex?%5Cinline%20r) is then defined as the set of all nodes ![\inline n](http://latex.codecogs.com/svg.latex?%5Cinline%20n) for which ![\inline x](http://latex.codecogs.com/svg.latex?%5Cinline%20x) lies on the path from ![\inline n](http://latex.codecogs.com/svg.latex?%5Cinline%20n) to ![\inline r](http://latex.codecogs.com/svg.latex?%5Cinline%20r). The *size* of a subtree is the number of nodes this set contains.
 
-You're given a tree $T$ along with a list $Q$ of integers $Q_1, Q_2, ..., Q_i, ..., Q_{N_Q}$. Each element in $Q$ is a *query*.
+You're given a tree ![\inline T](http://latex.codecogs.com/svg.latex?%5Cinline%20T) along with a list ![\inline Q](http://latex.codecogs.com/svg.latex?%5Cinline%20Q) of integers ![\inline Q_1, Q_2, ..., Q_i, ..., Q_{N_Q}](http://latex.codecogs.com/svg.latex?%5Cinline%20Q_1%2C%20Q_2%2C%20...%2C%20Q_i%2C%20...%2C%20Q_%7BN_Q%7D). Each element in ![\inline Q](http://latex.codecogs.com/svg.latex?%5Cinline%20Q) is a *query*.
 
-For each query  $Q_i$,
+For each query  ![\inline Q_i](http://latex.codecogs.com/svg.latex?%5Cinline%20Q_i),
 
-- Determine the probability that, for nodes $x$ and $r$ chosen uniformly at random, the subtree size of $x$ relative to $r$ is $Q_i$.
+- Determine the probability that, for nodes ![\inline x](http://latex.codecogs.com/svg.latex?%5Cinline%20x) and ![\inline r](http://latex.codecogs.com/svg.latex?%5Cinline%20r) chosen uniformly at random, the subtree size of ![\inline x](http://latex.codecogs.com/svg.latex?%5Cinline%20x) relative to ![\inline r](http://latex.codecogs.com/svg.latex?%5Cinline%20r) is ![\inline Q_i](http://latex.codecogs.com/svg.latex?%5Cinline%20Q_i).
 
-Represent this probability as a fraction $\frac{A}{B}$.
+Represent this probability as a fraction ![\inline \frac{A}{B}](http://latex.codecogs.com/svg.latex?%5Cinline%20%5Cfrac%7BA%7D%7BB%7D).
 
-- Compute the answer for this query, which is the multiplicative product of $A$ and $B^{-1} \mod{10^9 + 7}$ (where the latter term is the modular multiplicative inverse of $B$ with respect to $10^9 + 7$). Represent this value as $ans(i)$.
+- Compute the answer for this query, which is the multiplicative product of ![\inline A](http://latex.codecogs.com/svg.latex?%5Cinline%20A) and ![\inline B^{-1} \mod{10^9 + 7}](http://latex.codecogs.com/svg.latex?%5Cinline%20B%5E%7B-1%7D%20%5Cmod%7B10%5E9%20%2B%207%7D) (where the latter term is the modular multiplicative inverse of ![\inline B](http://latex.codecogs.com/svg.latex?%5Cinline%20B) with respect to ![\inline 10^9 + 7](http://latex.codecogs.com/svg.latex?%5Cinline%2010%5E9%20%2B%207)). Represent this value as ![\inline ans(i)](http://latex.codecogs.com/svg.latex?%5Cinline%20ans%28i%29).
 
-Output the sum of $i \times ans(i)$ for all $i$, where $1 \leq i \leq N_Q$. Since this number might be large, output it modulo $10^9 + 7$.
+Output the sum of ![\inline i \times ans(i)](http://latex.codecogs.com/svg.latex?%5Cinline%20i%20%5Ctimes%20ans%28i%29) for all ![\inline i](http://latex.codecogs.com/svg.latex?%5Cinline%20i), where ![\inline 1 \leq i \leq N_Q](http://latex.codecogs.com/svg.latex?%5Cinline%201%20%5Cleq%20i%20%5Cleq%20N_Q). Since this number might be large, output it modulo ![\inline 10^9 + 7](http://latex.codecogs.com/svg.latex?%5Cinline%2010%5E9%20%2B%207).
 
 ### Input
 
-- $T$: a tuple of $N_T-1$ elements $E_1, E_2, ..., E_{N-1}$, where $E_i$ is a tuple of two integers $u$ and $v$, denoting an undirected edge between nodes $u$ and $v$.
-- $Q$: a tuple of $N_Q$ integers denoting the queries.
+- ![\inline T](http://latex.codecogs.com/svg.latex?%5Cinline%20T): a tuple of ![\inline N_T-1](http://latex.codecogs.com/svg.latex?%5Cinline%20N_T-1) elements ![\inline E_1, E_2, ..., E_{N-1}](http://latex.codecogs.com/svg.latex?%5Cinline%20E_1%2C%20E_2%2C%20...%2C%20E_%7BN-1%7D), where ![\inline E_i](http://latex.codecogs.com/svg.latex?%5Cinline%20E_i) is a tuple of two integers ![\inline u](http://latex.codecogs.com/svg.latex?%5Cinline%20u) and ![\inline v](http://latex.codecogs.com/svg.latex?%5Cinline%20v), denoting an undirected edge between nodes ![\inline u](http://latex.codecogs.com/svg.latex?%5Cinline%20u) and ![\inline v](http://latex.codecogs.com/svg.latex?%5Cinline%20v).
+- ![\inline Q](http://latex.codecogs.com/svg.latex?%5Cinline%20Q): a tuple of ![\inline N_Q](http://latex.codecogs.com/svg.latex?%5Cinline%20N_Q) integers denoting the queries.
 
 ### Constraints
 
-- $1 \leq N_T, N_Q \leq 5 \times 10^5$
-- $1 \leq u, v, Q_i \leq N_T$
+- ![\inline 1 \leq N_T, N_Q \leq 5 \times 10^5](http://latex.codecogs.com/svg.latex?%5Cinline%201%20%5Cleq%20N_T%2C%20N_Q%20%5Cleq%205%20%5Ctimes%2010%5E5)
+- ![\inline 1 \leq u, v, Q_i \leq N_T](http://latex.codecogs.com/svg.latex?%5Cinline%201%20%5Cleq%20u%2C%20v%2C%20Q_i%20%5Cleq%20N_T)
