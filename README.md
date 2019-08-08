@@ -1,6 +1,6 @@
 # GSA ULTRA 2019
 
-This repository contains my solutions for GSA ULTRA 2019. The questions each have their own folder with a README containing the problem statement and the code I wrote for it.
+This repository contains my solutions for GSA ULTRA 2019. The questions each have their own folder with a README containing the problem statement, the code I wrote for it and a short writeup of how I approached the problem.
 
 I answered all of the problems except for "It's a cover up" and "The good, the bad and the stringy" and submitted my solutions with 4 minutes to spare!
 

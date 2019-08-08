@@ -18,3 +18,7 @@ Troy knows his stuff, but being put on the spot by his best friend has really un
 
 - ![\inline 1 \leq N \leq 2 \times 10^6](http://latex.codecogs.com/svg.latex?%5Cinline%201%20%5Cleq%20N%20%5Cleq%202%20%5Ctimes%2010%5E6)
 - ![\inline 1 \leq A_i \leq 10^9](http://latex.codecogs.com/svg.latex?%5Cinline%201%20%5Cleq%20A_i%20%5Cleq%2010%5E9)
+
+## My Solution
+
+The approach I took to solving this problem was to first find the least cost way to turn the sequence into a strictly increasing one, and a strictly decreasing one. Then I reasoned that the least cost bitonic sequence would be made up of the elementwise minimum of the increasing and decreasing sequences. However this gave solutions where two elements were equal at the peak, meaning it was not a bitonic sequence, so I just added 1 to these cases, raising one of the middle elements by 1 to make it a valid bitonic sequence.

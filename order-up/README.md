@@ -19,3 +19,7 @@ Given the appetites of your guests and the sizes of your servings, return the ma
 
 - ![\inline 1 \leq N \leq 10^6](http://latex.codecogs.com/svg.latex?%5Cinline%201%20%5Cleq%20N%20%5Cleq%2010%5E6)
 - ![\inline 1 \leq C_i, D_i \leq 10^9](http://latex.codecogs.com/svg.latex?%5Cinline%201%20%5Cleq%20C_i%2C%20D_i%20%5Cleq%2010%5E9)
+
+## My Solution
+
+I just sorted the two lists and gave the largest meal to the person with the largest appetite, and so on. I half convinced myself that this worked, but not quite, so I ended up writing a brute force solution to just test that there weren't any obvious cases that I had not thought about. None of the tests that I ran failed, so I can only assume that this answer is correct.

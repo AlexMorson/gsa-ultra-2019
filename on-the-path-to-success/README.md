@@ -17,3 +17,9 @@ Laura wants Dale to find ![\inline f(k)](http://latex.codecogs.com/svg.latex?%5C
 
 - ![\inline 2 \le N \le 40000](http://latex.codecogs.com/svg.latex?%5Cinline%202%20%5Cle%20N%20%5Cle%2040000)
 - ![\inline 0 \le V_i < 2^{8}](http://latex.codecogs.com/svg.latex?%5Cinline%200%20%5Cle%20V_i%20%3C%202%5E%7B8%7D), for all ![\inline i](http://latex.codecogs.com/svg.latex?%5Cinline%20i)
+
+## My Solution
+
+This problem had me worried until I read "bitwise AND" because I realised that `0 & x = 0`, so we can just loop through every node in the tree, do a tree search from that node - keeping track of the value of the path to each node along the way - until the value hits 0. We then know that after this point, the value of the paths to every node that has not been seen will be 0 as well, so we can stop exploring. The problem statement defines paths to be the same if they have the same pair of start/end nodes, so I actually count every path twice, meaning that I need to halve the values I get for f(i).
+
+I have a feeling that a test case with every node having value 255 would take too long for my program, but fortunately the test cases that were given must have been reasonable because my program had no trouble finishing in time.

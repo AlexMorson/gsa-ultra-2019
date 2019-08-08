@@ -5,3 +5,7 @@
 Output the sum of the ASCII values of the 14 letters of the answer to the above clue, using only lower case characters and excluding any whitespace characters.
 
 Note that there is no input for this question.
+
+## My Solution
+
+My first instinct was "Turing Machine", but that has the wrong number of letters. I'm not super sure about the first half of the clue, but the words "let expression" reminded me of Haskell, which then reminded me of Lambda Calculus.

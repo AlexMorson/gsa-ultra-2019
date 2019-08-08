@@ -23,3 +23,11 @@ Output the sum of ![\inline i \times ans(i)](http://latex.codecogs.com/svg.latex
 
 - ![\inline 1 \leq N_T, N_Q \leq 5 \times 10^5](http://latex.codecogs.com/svg.latex?%5Cinline%201%20%5Cleq%20N_T%2C%20N_Q%20%5Cleq%205%20%5Ctimes%2010%5E5)
 - ![\inline 1 \leq u, v, Q_i \leq N_T](http://latex.codecogs.com/svg.latex?%5Cinline%201%20%5Cleq%20u%2C%20v%2C%20Q_i%20%5Cleq%20N_T)
+
+## My Solution
+
+At first I didn't read the problem carefully enough and was under the impression that the queries being given were subtrees, rather than sizes of subtrees (which would have made the problem quite a bit easier)! I had thought of a way to solve this problem, then when I was ready to start coding up the solution I realised my mistake and went back to the drawing board.
+
+I eventually realised that if I knew the size of each subtree out of every node, I would have enough information to calculate the required probabilities. This is because we can calculate the number of nodes with subtrees of a given size, and the number of ways of getting that subtree relative to another node is equal to the number of nodes *not* in that subtree.
+
+To calculate the size of each subtree in every direction took a bit of graph searching hackery, because to calculate the size of a subtree you first want to calculate the size of the subtrees of the children, and just sum them up. So in the end my program effectively roots the tree at every node, and for each of them does some sort of bottom up traversal of the tree, calculating subtree sizes as it goes.

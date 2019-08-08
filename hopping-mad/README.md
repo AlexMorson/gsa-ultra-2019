@@ -13,3 +13,7 @@ Output the total distance Fergal covered, in centimetres.
 ### Constraints
 
 - ![\inline 2 \le N \le 10^{9}](http://latex.codecogs.com/svg.latex?%5Cinline%202%20%5Cle%20N%20%5Cle%2010%5E%7B9%7D)
+
+## My Solution
+
+This was a nice easy problem. Walking through a small example shows that the first hop has length N-1 and each subsequent hop decreases in length by 1, so the answer is simply the sum of the integers from 1 to N-1.

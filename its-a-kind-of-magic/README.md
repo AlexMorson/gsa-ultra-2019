@@ -24,3 +24,9 @@ Return ![\inline (\sum_{i=1}^{N_Q} 2^i \times ans(i)) \mod{10^9 + 7}](http://lat
 - ![\inline 1 \leq \textrm{length}(S_i) \leq 18](http://latex.codecogs.com/svg.latex?%5Cinline%201%20%5Cleq%20%5Ctextrm%7Blength%7D%28S_i%29%20%5Cleq%2018) for all ![\inline i](http://latex.codecogs.com/svg.latex?%5Cinline%20i)
 - ![\inline 1 \leq x_i \leq 10^{9}](http://latex.codecogs.com/svg.latex?%5Cinline%201%20%5Cleq%20x_i%20%5Cleq%2010%5E%7B9%7D) for all ![\inline i](http://latex.codecogs.com/svg.latex?%5Cinline%20i)
 - ![\inline 1 \leq L_i, R_i \leq 10^{18}](http://latex.codecogs.com/svg.latex?%5Cinline%201%20%5Cleq%20L_i%2C%20R_i%20%5Cleq%2010%5E%7B18%7D) for all ![\inline i](http://latex.codecogs.com/svg.latex?%5Cinline%20i)
+
+## My Solution
+
+My first solution was a simple brute force algorithm, looping over every string from L to R for every query and sliding the given strings over the number to see what matched. Obviously this was waaaay too slow for the hidden test cases and I had to think of something else.
+
+First I played with the idea of using smarter string searching algorithms, but I realised that any solution that looped over the values between L and R was doomed to fail. So my solution tries to calculate the number of times each string will appear between L and R without doing any string searching. It does this by first counting how many times it would appear in the least significant part of the numbers, then (recursively) moves on to counting the occurences in the next column, and so on. This was very tricky to think about (especially when trying to handle leading 0s correctly) and I had to make a lot of tweaks until I got an algorithm that even gave the same output as the brute force solution. I would not be surprised if this was a source of a lot of failed test cases.

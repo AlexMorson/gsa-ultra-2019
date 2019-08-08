@@ -16,3 +16,7 @@ Peter adds the restriction that Miles can only move to a neighbouring cell if it
 - ![\inline 1 \leq N \leq 1000](http://latex.codecogs.com/svg.latex?%5Cinline%201%20%5Cleq%20N%20%5Cleq%201000)
 - ![\inline 1 \leq M \leq 1000](http://latex.codecogs.com/svg.latex?%5Cinline%201%20%5Cleq%20M%20%5Cleq%201000)
 - ![\inline 0 \leq A_{i_j} \leq 10^9](http://latex.codecogs.com/svg.latex?%5Cinline%200%20%5Cleq%20A_%7Bi_j%7D%20%5Cleq%2010%5E9)
+
+## My Solution
+
+I had a lot of false starts with this problem. The first strategy I took was to find the "peaks" in the grid, then explore from there, keeping track of the longest way to get to each tile in the grid. However, the way that I explored the grid meant that I was doing a lot of wasted work, so my solution ran out of time on the hidden test cases. Then eventually I had the idea to think about the grid as a directed graph, and realised that it must be acyclic because the value of adjacent nodes must be strictly decreasing. This meant that I could topologically sort the graph and explore the grid in topological order, giving a linear time solution and eliminating the wasted work.

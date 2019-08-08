@@ -11,3 +11,7 @@ Your objective is to find the longest subarray in which every element is a ![\in
 ### Constraints
 
 - ![\inline 1 \leq N \leq 10^7](http://latex.codecogs.com/svg.latex?%5Cinline%201%20%5Cleq%20N%20%5Cleq%2010%5E7)
+
+## My Solution
+
+I just loop through the array, keeping track of the longest sequence of 1s and where it started, and the current number of 1s in a row and where that started.
