@@ -8,4 +8,5 @@ I answered all of the problems except for "It's a cover up" and "The good, the b
 
 I came in 20th place!! My code passed 60.68% of the test cases, and I got 11 of the 14 answers on the crossword correct.
 
-That means that I got one of "Cool, cool, cool" or "A cryptic crossword clue" wrong (I had different numbers in the square they cross at).
+~~That means that I got one of "Cool, cool, cool" or "A cryptic crossword clue" wrong (I had different numbers in the square they cross at).~~<br>
+**Update:** The answer that I got wrong on the crossword was "A cryptic crossword clue".
